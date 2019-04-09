@@ -148,6 +148,9 @@ def GetBuyerID(code):
     result = requests.post(url)
     r = result.content.decode("utf-8")
     print(r)
-    openid = json.loads(r)['bananapay_system_oauth_token_response']['openid']
+    try:
+        openid = json.loads(r)['bananapay_system_oauth_token_response']['openid']
     
-    return(openid)
+        return(openid)
+    except:
+        return ''
