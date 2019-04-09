@@ -1,0 +1,7 @@
+flask = "*"
+pillow = "*"
+qrcode = "*"
+requests = "*"
+python-dotenv = "*"
+gunicorn = "*"
+rsa = "*"
