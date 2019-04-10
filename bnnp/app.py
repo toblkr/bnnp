@@ -3,11 +3,12 @@ from .utils import TradeCreate
 import qrcode
 
 app = Flask(__name__)
-app_id = '2153135e8a1c572a'
+
 my_view_url = '/bnnppayment'
 
 print(__name__)
 
+app_id = '2153135e8a1c572a'
 original_url = 'https://openauth.bananapay.cn/ToAuthPage?app_id=' + app_id + \
     '&scope=auth_base&redirect_uri=' + my_view_url + '&state=123456'
 
@@ -19,6 +20,7 @@ qr_code.save("bnnp store.png")
 def index():
 
     app_id = request.args.get('app_id')
+    app_id = '2153135e8a1c572a'
     auth_code = request.args.get('auth_code')
     scope = request.args.get('scope')
     print(app_id)

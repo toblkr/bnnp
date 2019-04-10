@@ -97,7 +97,7 @@ def TradeCreate(auth_code, app_id):
     data['sign'] = sign
 
     url = api_url + '?' + urllib.parse.urlencode(data).replace('%27','%22')
-    
+    print(url)
     url = url.replace('%27','%22')
     # print(url)
     # print('\n')
