@@ -2,6 +2,7 @@ from flask import Flask,request
 from .utils import TradeCreate
 import qrcode
 import urllib
+import requests
 
 app = Flask(__name__)
 
@@ -11,9 +12,11 @@ print(__name__)
 
 app_id = '2153135e8a1c572a'
 original_url = 'https://openauth.bananapay.cn/ToAuthPage?app_id=' + app_id + \
-    '&scope=auth_base&redirect_uri=' + my_view_url
+    '&scope=auth_base&redirect_uri=' + 'https%3a%2f%2fbnnp.herokuapp.com%2fbnnppayment'
 print(original_url)
-print(urllib.parse.quote(original_url))
+
+
+
 qr_code = qrcode.make(original_url)
 qr_code.save("bnnp store.png")
 
