@@ -34,3 +34,9 @@ def index():
     TradeCreate(auth_code,app_id)
 
     return '<h1>11111</h1>'
+
+
+@app.route('/notify',methods=['GET',"POST"])
+def notify():
+    print(request.args)
+    return '<h1>notify</h1>'
